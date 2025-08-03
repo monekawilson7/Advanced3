@@ -8,10 +8,25 @@ namespace Advanced3
 {
     public class LibraryEngine
     {
-        public static void ProcessBooks(List<Book> bList, BookFunctionDelegate fptr) {
+        //a
+/*        public static void ProcessBooks(List<Book> bList, BookFunctionDelegate fptr) {
             foreach (Book book in bList) {
                 Console.WriteLine(fptr(book));
             }
+        }*/
+
+        //b
+        public static void ProcessBooks(List<Book> bList, Func<Book, String> fptr)
+        {
+            foreach (Book book in bList)
+            {
+                Console.WriteLine(fptr(book));
+            }
+        }
+
+        internal static void ProcessBooks(object books, Func<Book, string> getAuthors)
+        {
+            throw new NotImplementedException();
         }
     }
 }
