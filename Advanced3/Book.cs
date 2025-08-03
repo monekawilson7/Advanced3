@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace Advanced3
 {
+    public delegate string BookFunctionDelegate(Book b);
     public class Book
     {
         public string ISBN { get; set; }

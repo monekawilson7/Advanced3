@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace Advanced3
 {
@@ -19,6 +20,14 @@ namespace Advanced3
             Console.WriteLine(BookFunctions.GetAuthors(myBook));
             Console.WriteLine(BookFunctions.GetPrice(myBook));
             Console.WriteLine(myBook.ToString());
+            #endregion
+            #region Q2 a
+            List<Book> books = new List<Book>()
+            {
+                new Book("1", "programming", new string[] { "Author1" }, new DateTime(2000, 1, 1), 100),
+                new Book("2", "DataBase", new string[] { "Author2" }, new DateTime(2010, 1, 1), 200)
+            };
+            LibraryEngine.ProcessBooks(books, BookFunctions.GetTitle);
             #endregion
 
         }
